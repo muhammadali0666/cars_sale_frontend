@@ -1,0 +1,23 @@
+.header {
+  padding-top: 40px;
+  position: relative;
+}
+.header_btn {
+  position: absolute;
+  background: #2A85FF;
+  border-radius: 12px;
+  padding: 12px 35px;
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #FCFCFC;
+  right: 0;
+}
+
+.header_icon {
+  margin-right: 10px;
+}

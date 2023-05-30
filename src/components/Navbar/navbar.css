@@ -1,0 +1,19 @@
+.navbar_car {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.navbar_p {
+  font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 24px;
+color: #000000;
+text-decoration: none;
+}
+.navbar_symbol {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}

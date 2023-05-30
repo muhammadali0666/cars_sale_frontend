@@ -1,0 +1,35 @@
+.category {
+  padding-top: 24px;
+}
+
+.category_h2 {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 63px;
+  color: #000000;
+  margin-bottom: 48px;
+  text-decoration: none;
+}
+
+.category_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category_img {
+  margin-bottom: 16px;
+}
+
+.ctegory_paragraph {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}

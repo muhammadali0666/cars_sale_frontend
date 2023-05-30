@@ -1,0 +1,146 @@
+.car_info {
+  margin-top: 24px;
+}
+
+.car_info_paragraph {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 64px;
+}
+
+.car_info_box {
+  display: flex;
+}
+
+.car_info_left {
+  max-width: 396px;
+  background: #F6F6F6;
+  border-radius: 8px;
+  padding: 16px 24px;
+}
+
+.car_info_left_paragraph {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.car_info_left_p {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.car_info_let_img {
+  margin-bottom: 16px;
+}
+
+.car_info_left_bottom_p {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.car_info_left_bottom_p_extra {
+  margin-left: 50px;
+}
+
+.car_info_left_span {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 4px;
+}
+
+.hr {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.car_info_right {
+  margin-left: 32px;
+}
+
+.car_info_right_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car_info_right_span {
+  display: flex;
+  align-items: center;
+}
+
+.car_info_right_img+.car_info_right_img {
+  margin-left: 16px;
+}
+
+.car_info_right_big_img {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.car_info_right_text {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.car_info_right_bottom {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.car_info_right_big_360 {
+  margin-bottom: 12px;
+}
+
+.car_info_right_bottom_before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car_info_right_bottom_input {
+  border: 1px solid #CECECE;
+  width: 24px;
+  height: 24px;
+  border-radius: 400%;
+}
+
+.car_info_right_bottom_p {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-left: 8px;
+}
+.car_info_right_bottom + .car_info_right_bottom {
+  margin-left: 48px;
+}
