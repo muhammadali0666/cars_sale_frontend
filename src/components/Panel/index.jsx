@@ -1,7 +1,43 @@
 import "./panel.css";
 import Right from "../../assets/arrow-right.png";
+import { useState } from "react";
 
 export const Panel = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [title, setTitle] = useState("");
+
+  const handleFileInputChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleUploadImage = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+    formData.append("upload_preset", "chatImages");
+
+    fetch("https://api.cloudinary.com/v1_1/dev4pmh5c/image/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        fetch("http://localhost:4001/create_category", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            category_img: data.url,
+            category_title: title,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => alert(data.msg))
+          .catch((error) => console.log(error));
+        window.location.reload(true);
+      });
+  };
   return (
     <div className="panel">
       <div className="panel_box">
@@ -94,7 +130,7 @@ export const Panel = () => {
           aria-hidden="true"
         >
           <div className="modal-dialog">
-            <div className="modal-content">
+            <form className="modal-content" onSubmit={handleUploadImage}>
               <div className="modal-header">
                 <span className="modal_span me-3"></span>
                 <h5 className="modal-title" id="exampleModalLabel">
@@ -115,6 +151,9 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input"
                       placeholder="Kriting"
+                      required
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
                     />
                   </label>
                   <label
@@ -126,16 +165,18 @@ export const Panel = () => {
                       type="file"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Yuklash"
+                      accept=".txt, .jfif, .jpeg, .png"
+                      onChange={(e) => handleFileInputChange(e)}
                     />
                   </label>
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Saqlash
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </>
@@ -151,7 +192,7 @@ export const Panel = () => {
           aria-hidden="true"
         >
           <div className="modal-dialog">
-            <div className="modal-content">
+            <form className="modal-content">
               <div className="modal-header">
                 <span className="modal_span me-3"></span>
                 <h5 className="modal-title" id="exampleModalLabel">
@@ -172,6 +213,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                   <label
@@ -183,6 +225,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Yoq"
+                      required
                     />
                   </label>
                 </div>
@@ -193,6 +236,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                   <label
@@ -204,6 +248,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                 </div>
@@ -214,6 +259,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                   <label
@@ -225,6 +271,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                 </div>
@@ -235,6 +282,7 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                   <label
@@ -246,16 +294,18 @@ export const Panel = () => {
                       type="text"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                 </div>
                 <div className="modal_category_input_box">
                   <label htmlFor="input" className="modal_category_label">
-                    Rasm 360 ichki makon
+                    Rasm 360 tashqi makon
                     <input
                       type="file"
                       className="modal_category_input"
                       placeholder="Yuklash"
+                      required
                     />
                   </label>
                   <label
@@ -267,6 +317,7 @@ export const Panel = () => {
                       type="file"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Yuklash"
+                      required
                     />
                   </label>
                 </div>
@@ -278,27 +329,29 @@ export const Panel = () => {
                       className="modal_category_input"
                       placeholder="Mazmuni kiriting"
                       rows="5"
+                      required
                     />
                   </label>
                   <label
                     htmlFor="input"
                     className="modal_category_label modal_category_label_extra"
                   >
-                    Year
+                    mini view
                     <input
                       type="file"
                       className="modal_category_input modal_category_input_extra"
                       placeholder="Kriting"
+                      required
                     />
                   </label>
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Saqlash
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </>

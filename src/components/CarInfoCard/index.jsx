@@ -82,13 +82,15 @@ export const CarInfoCard = () => {
               />
             </span>
           </div>
-          <img
+          {/* <img
             src={MalibuBig}
             alt="car"
             className="car_info_right_big_img"
             width={824}
             height={444}
-          />
+          /> */}
+          <iframe
+          width={824} height={444} src="https://momento360.com/e/u/298352849df3474591a52d9cd5fe9055?utm_campaign=embed&utm_source=other&size=medium&display-plan=true" frameborder="0"></iframe>
          <div className="car_info_right_bottom_before">
          <img
             src={Deggrel}

@@ -1,5 +1,8 @@
 .category {
   padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .category_h2 {
@@ -32,4 +35,13 @@
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.cars_category_card {
+  text-decoration: none;
+margin-top: 50px;
+}
+
+.cars_category_card + .cars_category_card {
+  margin-left: 90px;
 }
