@@ -55,7 +55,7 @@
   font-size: 16px;
   line-height: 32px;
   color: #000000;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 .car_info_left_bottom_p_extra {
@@ -140,6 +140,7 @@
   line-height: 24px;
   color: #000000;
   margin-left: 8px;
+  margin-bottom: 0;
 }
 .car_info_right_bottom + .car_info_right_bottom {
   margin-left: 48px;

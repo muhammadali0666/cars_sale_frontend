@@ -11,7 +11,7 @@ export const Home = () => {
           Bosh sahifa
         </NavLink>
         <p className="navbar_symbol">{">"}</p>
-        <NavLink className="navbar_p" to="/model">
+        <NavLink className="navbar_p">
           modellari
         </NavLink>
       </div>

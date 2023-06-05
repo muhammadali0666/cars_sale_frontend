@@ -1,0 +1,41 @@
+.profile {
+  display: flex;
+}
+.profile_inner {
+  display: flex;
+}
+
+.pro_sidebar {
+  width: 20vw;
+  background-color: #f6f1f1;
+  padding: 50px;
+  height: 100vh;
+}
+
+/* .profile_img {} */
+
+.pro_admin_link {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.pro_admin_link_img {
+  margin-right: 10px;
+}
+
+.pro_admin_link_p {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.pro_admin {
+  padding-left: 40px;
+  padding-top: 50px;
+}
+
+.pro_admin_link_logout {
+  margin-top: 60vh;
+}

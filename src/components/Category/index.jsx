@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export const Category = () => {
-  const [getGata, setMyData] = useState("");
+  const [getGata, setMyData] = useState([]);
+  const [datas, setDatas] = useState("");
+  const [param, setParam] = useState('')
 
   useEffect(() => {
     fetch(`http://localhost:4001/get_categories`)
@@ -13,19 +15,17 @@ export const Category = () => {
       .catch((err) => console.log(err));
   }, []);
 
-
-
-  const getId = (element) => {
-    sessionStorage.setItem("id", element)
-  }
-
   return (
     <div>
       <h2 className="category_h2">Modellari</h2>
       <div className="category" style={{ display: "flex" }}>
         {getGata.length &&
           getGata.map((e) => (
-            <NavLink className="cars_category_card" to="/model" onClick={getId(e.id)}>
+            <NavLink
+              key={e.id}
+              className="cars_category_card"
+              to={`/get_cars/model/${e.id}`}
+            >
               <div className="category_box">
                 <img
                   src={e.category_img}
